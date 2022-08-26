@@ -1,0 +1,36 @@
+Tabela de SaboresPizzas	
+	- PizzaID
+	- Sabor
+	- Ingredientes
+	- Disponível(S/N)
+Tabela PreçoSaboresPizzas	
+	- PrecoSaboresPizzasID
+	- PizzaID
+	- Preço
+	- Tamanho
+	
+Tabela de Pedido com ID
+	- IDPedido
+	- Sabor
+	- PreçoFrete
+	- PreçoTotal
+Tabela de PedidoItem 
+	- ItemID
+	- PedidoID
+	- Descricao
+	- Observacao
+Tabela SaboresItem
+	- SaboresItemID
+	- ItemID
+	- PizzaID
+
+Tarefas
+-Disponibilizar um endpoint de sabores de pizzas;
+
+	
+Validação do Pedido: 
+	- Array de PedidoItem: mínimo 1 pizza e máximo 10;
+	- Lista de Sabores; Máximo de 2 sabores por pizza;
+	- Preço da pizza de 2 sabores será a média de preço de ambos;
+	- Validar se sabor está disponível;
+	
