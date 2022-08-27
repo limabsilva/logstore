@@ -1,8 +1,20 @@
-Tabela de SaboresPizzas	
+Tabela de Cliente - OK
+	- ClienteID
+	- Celular(identificador único=DDD+NumCelular, somente números)
+	- Nome
+	- Logradouro
+	- Numero
+	- Bairro
+	- Cidade
+	- UF
+	- CEP
+
+Tabela de SaboresPizzas	- OK
 	- PizzaID
 	- Sabor
 	- Ingredientes
 	- Disponível(S/N)
+	
 Tabela PreçoSaboresPizzas	
 	- PrecoSaboresPizzasID
 	- PizzaID
@@ -11,13 +23,13 @@ Tabela PreçoSaboresPizzas
 	
 Tabela de Pedido com ID
 	- IDPedido
-	- Sabor
+	- ClienteID
+	- Descricao
 	- PreçoFrete
 	- PreçoTotal
 Tabela de PedidoItem 
 	- ItemID
 	- PedidoID
-	- Descricao
 	- Observacao
 Tabela SaboresItem
 	- SaboresItemID
