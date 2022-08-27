@@ -1,6 +1,5 @@
-﻿using HungryPizza.Domain.Enums;
-namespace HungryPizza.API.Contracts.Response;
-public class PizzaFlavorResponse
+﻿namespace HungryPizza.Domain.Contracts.Response;
+public class PizzaFlavorRequest
 {
     public string? Flavor { get; set; }
     public string? Ingredients { get; set; }

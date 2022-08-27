@@ -1,12 +1,11 @@
-﻿using HungryPizza.API.Contracts.Response;
+﻿using HungryPizza.Domain.Contracts.Response;
 using HungryPizza.Domain.Entities;
-using HungryPizza.Domain.Enums;
 
-namespace HungryPizza.API.Mappers
+namespace HungryPizza.Domain.Mappers
 {
     public static class PizzaFlavorsMapper
     {
-        public static PizzaFlavorEntity PizzaFlavorMapper(PizzaFlavorResponse pizzaFlavorResponse)
+        public static PizzaFlavorEntity PizzaFlavorMapper(PizzaFlavorRequest pizzaFlavorResponse)
         {
             return new PizzaFlavorEntity()
             {
@@ -16,7 +15,7 @@ namespace HungryPizza.API.Mappers
             };
         }
 
-        public static PizzaFlavorsPriceEntity PizzaFlavorsPriceMapper(PizzaFlavorResponse pizzaFlavorResponse)
+        public static PizzaFlavorsPriceEntity PizzaFlavorsPriceMapper(PizzaFlavorRequest pizzaFlavorResponse)
         {
             return new PizzaFlavorsPriceEntity()
             {

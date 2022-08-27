@@ -1,4 +1,5 @@
 ﻿using HungryPizza.Domain.Entities;
+using HungryPizza.Domain.Contracts.Response;
 using HungryPizza.Service.Interfaces;
 using HungryPizza.Persistence.Interfaces;
 using Microsoft.Extensions.Logging;
@@ -20,9 +21,9 @@ namespace HungryPizza.Service.Services
             _pizzaFlavorsPriceRepository = pizzaFlavorsPriceRepository;
         }
 
-        public async Task<IEnumerable<PizzaFlavorEntity>> GetAll()
+        public async Task<IEnumerable<PizzasFlavorsResponse>> ListAllPizzas()
         {
-            return await _pizzaFlavorRepository.GetAll();
+            return await _pizzaFlavorRepository.ListAllPizzas();
         }
 
         public async Task<string> RegisterPizzaFlavor(PizzaFlavorEntity pizzaFlavorEntity, PizzaFlavorsPriceEntity pizzaFlavorsPriceEntity)

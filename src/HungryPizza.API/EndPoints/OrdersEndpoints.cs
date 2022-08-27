@@ -1,6 +1,6 @@
 ﻿using HungryPizza.Service.Interfaces;
-using HungryPizza.API.Contracts.Response;
-using HungryPizza.API.Mappers;
+using HungryPizza.Domain.Contracts.Response;
+using HungryPizza.Domain.Mappers;
 using HungryPizza.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,10 +18,10 @@ public static class OrdersEndpoints
         string RootName = "pizza";
         app.MapGet(RootName + "/listAll", async ([FromServices] IPizzaFlavorService service) =>
             {
-                return await service.
+                return await service.ListAllPizzas();
             });
 
-        app.MapPost(RootName + "/register", async ([FromServices] IPizzaFlavorService service, [FromBody] PizzaFlavorResponse pizzaFlavorResponse) =>
+        app.MapPost(RootName + "/register", async ([FromServices] IPizzaFlavorService service, [FromBody] PizzaFlavorRequest pizzaFlavorResponse) =>
         {
             PizzaFlavorEntity pizzaFlavorEntity = PizzaFlavorsMapper.PizzaFlavorMapper(pizzaFlavorResponse);
             PizzaFlavorsPriceEntity pizzaFlavorsPriceEntity = PizzaFlavorsMapper.PizzaFlavorsPriceMapper(pizzaFlavorResponse);
