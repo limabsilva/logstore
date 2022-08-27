@@ -25,8 +25,8 @@ Tabela de Pedido com ID
 	- IDPedido
 	- ClienteID
 	- Descricao
-	- PreçoFrete
-	- PreçoTotal
+	- EnderecoEntrega
+	- PreçoTotalPreçoTotal
 Tabela de PedidoItem 
 	- ItemID
 	- PedidoID
@@ -37,12 +37,19 @@ Tabela SaboresItem
 	- PizzaID
 
 Tarefas
--Disponibilizar um endpoint de sabores de pizzas;
-
+- Disponibilizar um endpoint de sabores de pizzas;
+- Preço frete colocar em classe estática como zero por enquanto. 
+Futuramente implementar método para calcular frete.
 	
 Validação do Pedido: 
 	- Array de PedidoItem: mínimo 1 pizza e máximo 10;
 	- Lista de Sabores; Máximo de 2 sabores por pizza;
+	- DeliveryAddress estar preenchido;
+	- ClientAddress estar preenchido;
+	- Sabor do item do pedido tem que estar preenchido;
+	- DeliveryAddress precisa estar preenchido preenchido,
+	se vier de cliente cadastrado pegar do cadastro, nesse caso address no requirid;
+RN	
 	- Preço da pizza de 2 sabores será a média de preço de ambos;
 	- Validar se sabor está disponível;
 	
