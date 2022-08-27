@@ -4,6 +4,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using HungryPizza.Persistence.Contexts;
+using HungryPizza.Persistence.Interfaces;
+using HungryPizza.Persistence.Repositories;
 
 namespace HungryPizza.Persistence;
 public static class PersitenceDependecy
@@ -30,7 +32,12 @@ public static class PersitenceDependecy
     }
     private static void ConfigureRepositories(IServiceCollection services)
     {
-        //services.AddScoped<ICarCategoryRepository, CarCategoryRepository>();
+        services.AddScoped<IClientRepository, ClientRepository>();
+        services.AddScoped<IItemFlavorsRepository, ItemFlavorsRepository>();
+        services.AddScoped<IOrderItemRepository, OrderItemRepository>();
+        services.AddScoped<IOrderRepository, OrderRepository>();
+        services.AddScoped<IPizzaFlavorRepository, PizzaFlavorRepository>();
+        services.AddScoped<IPizzaFlavorsPriceRepository, PizzaFlavorsPriceRepository>();
     }
 }
 

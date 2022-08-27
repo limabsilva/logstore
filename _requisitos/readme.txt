@@ -7,3 +7,16 @@ comando abaixo no terminal do projeto HungryPizza.Persistence:
 	
 	Deverá aparecer a seguinte mensagem de sucesso: "Applying migration '20220827140000_CreateDatabase'. Done."
 	
+	
+	
+Documentação em https://localhost:7101/swagger/index.html	
+Endpoint: Pizza
+pizza/register
+{
+  "flavor": "3 Queijos",
+  "ingredients": "Queijo prato, muçarela e catupiry.",
+  "available": true,
+  "price": 50,
+  "size": "Família"
+}	
+	

@@ -21,7 +21,7 @@ public class BaseRepository<T> where T : class
         this._databaseContext = databaseContext;
     }
 
-    public virtual async Task<Result> SaveChanges()
+    public virtual async Task<Result> SaveChangesAsync()
     {
         try
         {
@@ -34,19 +34,19 @@ public class BaseRepository<T> where T : class
         }
     }
 
-    public async Task Delete(T model)
+    public async Task Delete(T entity)
     {
-        _databaseContext.Set<T>().Remove(model);
+        _databaseContext.Set<T>().Remove(entity);
     }
 
-    public virtual async Task Create(T model)
+    public virtual async Task Create(T entity)
     {
-        await this._databaseContext.Set<T>().AddAsync(model);
+        await this._databaseContext.Set<T>().AddAsync(entity);
     }
 
-    public virtual Task Update(T model)
+    public virtual Task Update(T entity)
     {
-        this._databaseContext.Entry(model).State = EntityState.Modified;
+        this._databaseContext.Entry(entity).State = EntityState.Modified;
         return Task.CompletedTask;
     }
 

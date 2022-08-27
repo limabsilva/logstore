@@ -3,5 +3,5 @@
 namespace HungryPizza.Persistence.Interfaces;
 public interface IPizzaFlavorRepository : IBaseRepository<PizzaFlavorEntity>
 {
-
+    
 }

@@ -9,7 +9,6 @@ public class PizzaFlavorRepository : BaseRepository<PizzaFlavorEntity>, IPizzaFl
     public PizzaFlavorRepository(IDbConnection connection, DBHungryPizzaContext databaseContext)
         : base(connection, databaseContext)
     {
-
     }
 
     Task<bool> IBaseRepository<PizzaFlavorEntity>.Delete(int id)
