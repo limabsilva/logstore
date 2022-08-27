@@ -11,5 +11,6 @@ public class ClientEntity : BaseEntity
     public string? State { get; set; }
     public string? City { get; set; }
     public string? ZipCode { get; set; }
+    public ICollection<OrderEntity>? Orders { get; set; }
 }
 

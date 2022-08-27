@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HungryPizza.Domain\HungryPizza.Domain.csproj" />
+    <ProjectReference Include="..\HungryPizza.Persistence\HungryPizza.Persistence.csproj" />
     <ProjectReference Include="..\HungryPizza.Service\HungryPizza.Service.csproj" />
   </ItemGroup>
 

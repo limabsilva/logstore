@@ -1,6 +1,6 @@
 ﻿
 namespace HungryPizza.Domain.Entities;
-public class ItemFlavors : BaseEntity
+public class ItemFlavorsEntity : BaseEntity
 {
     public int OrderItemID { get; set; }
     public OrderItemEntity? OrderItem { get; set; }
