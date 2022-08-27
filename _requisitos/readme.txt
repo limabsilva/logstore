@@ -5,5 +5,5 @@ com seus devidos relacionamentos e realizar operações simples de cadastro.
 comando abaixo no terminal do projeto HungryPizza.Persistence:
 	dotnet ef database update
 	
-	Deverá aparecer a seguinte mensagem de sucesso: "Applying migration '20220827135114_CreateNewDatabase'. Done."
+	Deverá aparecer a seguinte mensagem de sucesso: "Applying migration '20220827140000_CreateDatabase'. Done."
 	
