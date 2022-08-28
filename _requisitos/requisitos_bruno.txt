@@ -55,7 +55,7 @@ RN
 	
 Tarefas de Hoje(28)
 - Validar dados do contrato; - OK
-- Criar GetOne de Cliente;
+- Criar GetOne de Cliente; - OK
 - Montar Contrato de Pedido;
 - Cadastrar pedido;
 - Implementar regras de negócio(6)

@@ -5,5 +5,7 @@ namespace HungryPizza.Service.Interfaces;
 public interface IClientService
 {
     Task<string> RegisterClient(ClientEntity clientEntity);
+
+    ClientEntity GetClientByTelephone(string phoneNumber);
 }
 

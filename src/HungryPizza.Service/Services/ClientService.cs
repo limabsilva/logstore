@@ -52,5 +52,13 @@ public class ClientService : IClientService
             return ret;
         }
     }
+
+    public ClientEntity GetClientByTelephone(string phoneNumber)
+    {
+        ClientEntity clientEntity = new ClientEntity();
+        clientEntity = _clientRepository.GetClientByTelephone(phoneNumber);
+        return clientEntity;
+    }
+
 }
 
