@@ -3,11 +3,12 @@ using HungryPizza.Service.Services;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace HungryPizza.Service;
-    public static class ServiceDependency
+public static class ServiceDependency
+{
+    public static void AddServiceModule(this IServiceCollection services)
     {
-        public static void AddServiceModule(this IServiceCollection services)
-        {
-            services.AddTransient<IPizzaFlavorService, PizzaFlavorService>();
-            
-        }
+        services.AddTransient<IPizzaFlavorService, PizzaFlavorService>();
+        services.AddTransient<IClientService, ClientService>();
+
     }
+}

@@ -62,3 +62,16 @@ pizza/register
   "size": "FAMÍLIA"
 }
 	
+client/register
+{
+  "telephone": "21987930138",
+  "name": "HungryPizza",
+  "streetName": "Rua Recife",
+  "number": 916,
+  "complement": "",
+  "neighborhood": "Cidade Nova",
+  "state": "SP",
+  "city": "Santa Barbara Doeste",
+  "zipCode": "13454369",
+  "orders": null
+}	

@@ -1,4 +1,4 @@
-﻿namespace HungryPizza.Domain.Contracts.Response;
+﻿namespace HungryPizza.Domain.Contracts.Request;
 public class PizzaFlavorRequest
 {
     public string? Flavor { get; set; }

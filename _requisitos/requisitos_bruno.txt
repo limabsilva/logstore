@@ -37,7 +37,7 @@ Tabela SaboresItem
 	- PizzaID
 
 Tarefas
-- Disponibilizar um endpoint de sabores de pizzas;
+- Disponibilizar um endpoint de sabores de pizzas; - OK
 - Preço frete colocar em classe estática como zero por enquanto. 
 Futuramente implementar método para calcular frete.
 	

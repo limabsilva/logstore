@@ -1,5 +1,5 @@
 ﻿using HungryPizza.Service.Interfaces;
-using HungryPizza.Domain.Contracts.Response;
+using HungryPizza.Domain.Contracts.Request;
 using HungryPizza.Domain.Mappers;
 using HungryPizza.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
