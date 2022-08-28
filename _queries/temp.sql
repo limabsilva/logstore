@@ -1,5 +1,4 @@
-﻿--delete from [dbo].[PizzaFlavor];
-delete from [dbo].[PizzaFlavorsPrice];
+﻿
 
 select 
 	PF.PizzaFlavorID,

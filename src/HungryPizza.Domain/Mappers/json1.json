@@ -1,0 +1,24 @@
+{
+  "client": {
+    "telephone": "string",
+    "name": "string",
+    "streetName": "string",
+    "number": 0,
+    "complement": "string",
+    "neighborhood": "string",
+    "state": "string",
+    "city": "string",
+    "zipCode": "string"
+  },
+  "description": "string",
+  "pizzas": [
+    {
+      "flavors": [
+        {
+          "pizzaFlavorID": 0
+        }
+      ],
+      "comments": "string"
+    }
+  ]
+}

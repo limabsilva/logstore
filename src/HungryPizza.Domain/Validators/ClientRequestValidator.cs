@@ -9,7 +9,7 @@ public class ClientRequestValidator : IValidator<ClientRequest>
         var validatorReponse = new ModelValidator();
 
         validatorReponse.NotEmpty(instance.Telephone, ValidatorMessages.MandatoryFieldMessage("Telephone"));
-        validatorReponse.MaxLenght(instance.Telephone, 11, ValidatorMessages.MaxLenghtExceededFieldMessage("Telephone", 11));
+        validatorReponse.ExactLenght(instance.Telephone, 11, ValidatorMessages.ExactLenghtNumberFieldMessage("Telephone", 11));
         validatorReponse.NotEmpty(instance.Name, ValidatorMessages.MandatoryFieldMessage("Name"));
         validatorReponse.MaxLenght(instance.Name, 200, ValidatorMessages.MaxLenghtExceededFieldMessage("Name", 200));
         validatorReponse.NotEmpty(instance.StreetName, ValidatorMessages.MandatoryFieldMessage("StreetName"));

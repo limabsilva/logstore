@@ -42,11 +42,11 @@ Tarefas
 Futuramente implementar método para calcular frete.
 	
 Validação do Pedido: 
+Se o Cliente for cadastrado não precisa informar o endereço, apenas telefone.
+
 	- Array de PedidoItem: mínimo 1 pizza e máximo 10;
 	- Lista de Sabores; Máximo de 2 sabores por pizza;
-	- DeliveryAddress estar preenchido;
-	- ClientAddress estar preenchido;
-	- Sabor do item do pedido tem que estar preenchido;
+	- DeliveryAddress estar preenchido;	
 	- DeliveryAddress precisa estar preenchido preenchido,
 	se vier de cliente cadastrado pegar do cadastro, nesse caso address no requirid;
 RN	
@@ -56,8 +56,11 @@ RN
 Tarefas de Hoje(28)
 - Validar dados do contrato; - OK
 - Criar GetOne de Cliente; - OK
-- Montar Contrato de Pedido;
+- Montar Contrato de Pedido; - OK
 - Cadastrar pedido;
 - Implementar regras de negócio(6)
+	- ClientAddress estar preenchido; OK
+	- Sabor do item do pedido tem que estar preenchido; OK
+
 - Testes de unidade
 	
