@@ -23,3 +23,6 @@ select
 
 
 --select * from [dbo].[PizzaFlavorsPrice];
+
+select * from [dbo].Client
+select * from [Order]

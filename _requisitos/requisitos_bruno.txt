@@ -37,7 +37,7 @@ Tabela SaboresItem
 	- PizzaID
 
 Tarefas
-- Disponibilizar um endpoint de sabores de pizzas;
+- Disponibilizar um endpoint de sabores de pizzas; - OK
 - Preço frete colocar em classe estática como zero por enquanto. 
 Futuramente implementar método para calcular frete.
 	
@@ -52,4 +52,12 @@ Validação do Pedido:
 RN	
 	- Preço da pizza de 2 sabores será a média de preço de ambos;
 	- Validar se sabor está disponível;
+	
+Tarefas de Hoje(28)
+- Validar dados do contrato; - OK
+- Criar GetOne de Cliente; - OK
+- Montar Contrato de Pedido;
+- Cadastrar pedido;
+- Implementar regras de negócio(6)
+- Testes de unidade
 	
