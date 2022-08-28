@@ -24,6 +24,10 @@ public class PizzaFlavorService : IPizzaFlavorService
     {
         return await _pizzaFlavorRepository.ListAllPizzas();
     }
+    public async Task<IEnumerable<PizzasFlavorsResponse>> GetOnePizza(int id)
+    {
+        return await _pizzaFlavorRepository.GetOnePizza(id);
+    }
 
     public async Task<string> RegisterPizzaFlavor(PizzaFlavorEntity pizzaFlavorEntity, PizzaFlavorsPriceEntity pizzaFlavorsPriceEntity)
     {

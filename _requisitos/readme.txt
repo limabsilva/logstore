@@ -18,8 +18,8 @@ Eis JSON para cadastrar este cliente default:
 	Method: POST	
 	client/register
 	{
-	  "telephone": "21987930138",
-	  "name": "HungryPizza",
+	  "telephone": "11900000000",
+	  "name": "Cliente não registrado",
 	  "streetName": "Rua Recife",
 	  "number": 916,
 	  "complement": "",

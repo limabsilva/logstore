@@ -25,6 +25,7 @@ public static class OrderItemConfig
 
             #region Columns
             entity.Property(e => e.Comments).HasColumnName("Comments").HasColumnType("nvarchar(500)");
+            entity.Property(e => e.PriceItem).HasColumnName("PriceItem").HasColumnType("decimal(18,2)");
             #endregion Columns
 
         });

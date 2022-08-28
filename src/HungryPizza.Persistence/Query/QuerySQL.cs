@@ -15,5 +15,15 @@ public static class QuerySQL
 				PFP.Price AS PricePizza,
 				PFP.Size AS SizePizza
 			from [dbo].[PizzaFlavor] PF INNER JOIN [dbo].[PizzaFlavorsPrice] PFP ON PFP.PizzaFlavorEntityID = PF.PizzaFlavorID";
+
+	public static string GetOnePizza = @"select 
+				PF.PizzaFlavorID,
+				PF.Flavor,
+				PF.Ingredients,
+				PF.Available,
+				PFP.Price AS PricePizza,
+				PFP.Size AS SizePizza
+			from [dbo].[PizzaFlavor] PF INNER JOIN [dbo].[PizzaFlavorsPrice] PFP ON PFP.PizzaFlavorEntityID = PF.PizzaFlavorID
+			where PF.PizzaFlavorID = @PizzaFlavorID";
 }
 

@@ -25,3 +25,5 @@ select
 
 select * from [dbo].Client
 select * from [Order]
+select * from [OrderItem]
+select * from [ItemFlavors]

@@ -36,31 +36,38 @@ Tabela SaboresItem
 	- ItemID
 	- PizzaID
 
+
+	
+
+	
+Tarefas de Hoje(28)
+	- Validar dados do contrato; - OK
+	- Criar GetOne de Cliente; - OK
+	- Montar Contrato de Pedido; - OK
+	- Cadastrar pedido;
+	- Implementar regras de negócio(6)
+		- ClientAddress estar preenchido; OK
+		- Sabor do item do pedido tem que estar preenchido; OK
+		- DeliveryAddress precisa estar preenchido preenchido,
+		se vier de cliente cadastrado pegar do cadastro, 
+		nesse caso endereço não é obrigatório; OK
+		- DeliveryAddress estar preenchido; OK
+		- Array de PedidoItem: mínimo 1 pizza e máximo 10; OK
+		- Lista de Sabores; Máximo de 2 sabores por pizza; OK
+		- Se o Cliente for cadastrado não precisa informar o endereço, 
+		apenas telefone. Não há validação no contrato. OK
+		
+	Validação do Pedido: 		
+	RN	
+	- Preço da pizza de 2 sabores será a média de preço de ambos; OK
+	- Validar se sabor está disponível; OK
+
 Tarefas
 - Disponibilizar um endpoint de sabores de pizzas; - OK
 - Preço frete colocar em classe estática como zero por enquanto. 
-Futuramente implementar método para calcular frete.
-	
-Validação do Pedido: 
-Se o Cliente for cadastrado não precisa informar o endereço, apenas telefone.
+Futuramente implementar método para calcular frete. OK
 
-	- Array de PedidoItem: mínimo 1 pizza e máximo 10;
-	- Lista de Sabores; Máximo de 2 sabores por pizza;
-	- DeliveryAddress estar preenchido;	
-	- DeliveryAddress precisa estar preenchido preenchido,
-	se vier de cliente cadastrado pegar do cadastro, nesse caso address no requirid;
-RN	
-	- Preço da pizza de 2 sabores será a média de preço de ambos;
-	- Validar se sabor está disponível;
-	
-Tarefas de Hoje(28)
-- Validar dados do contrato; - OK
-- Criar GetOne de Cliente; - OK
-- Montar Contrato de Pedido; - OK
-- Cadastrar pedido;
-- Implementar regras de negócio(6)
-	- ClientAddress estar preenchido; OK
-	- Sabor do item do pedido tem que estar preenchido; OK
+
 
 - Testes de unidade
 	
