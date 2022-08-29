@@ -71,9 +71,9 @@ public static class OrdersEndpoints
             return await service.RegisterOrder(clientEntity, orderEntity, orderItemEntities);
         });
 
-        app.MapGet(RootName + "/listAllByClient", async ([FromServices] IOrderService service, [FromQuery] string phoneNumber) =>
+        app.MapGet(RootName + "/listAllByClient", async ([FromServices] IOrderService service, [FromQuery] string phoneNumber, [FromQuery] int page) =>
         {
-            return await service.GetListOrdersByClient(phoneNumber);
+            return await service.GetListOrdersByClient(phoneNumber, page);
         });
 
     }

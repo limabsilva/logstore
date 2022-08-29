@@ -146,9 +146,9 @@ public class OrderService : IOrderService
         }
     }
 
-    public async Task<IEnumerable<OrdersListClientResponse>> GetListOrdersByClient(string phoneNumber)
+    public async Task<IEnumerable<OrdersListClientResponse>> GetListOrdersByClient(string phoneNumber, int page)
     {
-        return await _orderRepository.GetListOrdersByClient(phoneNumber);
+        return await _orderRepository.GetListOrdersByClient(phoneNumber, page);
     }
     protected static string SetDeliveryAddress(ClientEntity clientEntity)
     {
