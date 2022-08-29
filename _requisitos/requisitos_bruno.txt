@@ -1,8 +1,20 @@
-Tabela de SaboresPizzas	
+Tabela de Cliente - OK
+	- ClienteID
+	- Celular(identificador único=DDD+NumCelular, somente números)
+	- Nome
+	- Logradouro
+	- Numero
+	- Bairro
+	- Cidade
+	- UF
+	- CEP
+
+Tabela de SaboresPizzas	- OK
 	- PizzaID
 	- Sabor
 	- Ingredientes
 	- Disponível(S/N)
+	
 Tabela PreçoSaboresPizzas	
 	- PrecoSaboresPizzasID
 	- PizzaID
@@ -11,26 +23,51 @@ Tabela PreçoSaboresPizzas
 	
 Tabela de Pedido com ID
 	- IDPedido
-	- Sabor
-	- PreçoFrete
-	- PreçoTotal
+	- ClienteID
+	- Descricao
+	- EnderecoEntrega
+	- PreçoTotalPreçoTotal
 Tabela de PedidoItem 
 	- ItemID
 	- PedidoID
-	- Descricao
 	- Observacao
 Tabela SaboresItem
 	- SaboresItemID
 	- ItemID
 	- PizzaID
 
-Tarefas
--Disponibilizar um endpoint de sabores de pizzas;
 
 	
-Validação do Pedido: 
-	- Array de PedidoItem: mínimo 1 pizza e máximo 10;
-	- Lista de Sabores; Máximo de 2 sabores por pizza;
-	- Preço da pizza de 2 sabores será a média de preço de ambos;
-	- Validar se sabor está disponível;
+
+	
+Tarefas de Hoje(28)
+	- Validar dados do contrato; - OK
+	- Criar GetOne de Cliente; - OK
+	- Montar Contrato de Pedido; - OK
+	- Cadastrar pedido; OK
+	- Implementar regras de negócio(6)
+		- ClientAddress estar preenchido; OK
+		- Sabor do item do pedido tem que estar preenchido; OK
+		- DeliveryAddress precisa estar preenchido preenchido,
+		se vier de cliente cadastrado pegar do cadastro, 
+		nesse caso endereço não é obrigatório; OK
+		- DeliveryAddress estar preenchido; OK
+		- Array de PedidoItem: mínimo 1 pizza e máximo 10; OK
+		- Lista de Sabores; Máximo de 2 sabores por pizza; OK
+		- Se o Cliente for cadastrado não precisa informar o endereço, 
+		apenas telefone. Não há validação no contrato. OK
+		
+	Validação do Pedido: 		
+	RN	
+	- Preço da pizza de 2 sabores será a média de preço de ambos; OK
+	- Validar se sabor está disponível; OK
+
+Tarefas
+- Disponibilizar um endpoint de sabores de pizzas; - OK
+- Preço frete colocar em classe estática como zero por enquanto. 
+Futuramente implementar método para calcular frete. OK
+
+
+
+- Testes de unidade - OK
 	

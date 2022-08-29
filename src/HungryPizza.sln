@@ -13,6 +13,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HungryPizza.Persistence", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HungryPizza.Domain", "HungryPizza.Domain\HungryPizza.Domain.csproj", "{35C375D3-DC4B-4060-A8DE-A6D33A143D6C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{4F3C5176-8283-4D86-BA6C-8A85E58A9BFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HungryPizza.Service.Test", "..\tests\HungryPizza.Service.Test\HungryPizza.Service.Test.csproj", "{AA1B42D9-D07E-4E7A-8756-12F2DE38E2DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +39,10 @@ Global
 		{35C375D3-DC4B-4060-A8DE-A6D33A143D6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35C375D3-DC4B-4060-A8DE-A6D33A143D6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35C375D3-DC4B-4060-A8DE-A6D33A143D6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA1B42D9-D07E-4E7A-8756-12F2DE38E2DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA1B42D9-D07E-4E7A-8756-12F2DE38E2DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA1B42D9-D07E-4E7A-8756-12F2DE38E2DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA1B42D9-D07E-4E7A-8756-12F2DE38E2DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +52,7 @@ Global
 		{89684F0F-3AE6-441A-B9C0-B2C8F9500B41} = {B2D38DF1-108E-440B-995A-D9EBB384D507}
 		{D9928504-A6EB-4F01-A7DA-D10A1305B22A} = {B2D38DF1-108E-440B-995A-D9EBB384D507}
 		{35C375D3-DC4B-4060-A8DE-A6D33A143D6C} = {B2D38DF1-108E-440B-995A-D9EBB384D507}
+		{AA1B42D9-D07E-4E7A-8756-12F2DE38E2DB} = {4F3C5176-8283-4D86-BA6C-8A85E58A9BFC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {85DB7396-B39F-43CE-B2F3-62DC8D2C110A}
