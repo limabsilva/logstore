@@ -15,7 +15,7 @@ public class OrderService : IOrderService
     private readonly IOrderItemRepository _orderItemRepository;
     private readonly IItemFlavorsRepository _itemFlavorsRepository;
     private readonly IPizzaFlavorService _pizzaFlavorService;
-    private readonly OrderValidator _orderValidator;
+    private readonly ClientValidator _clientValidator;
 
     public OrderService(ILogger<OrderService> logger,
         IOrderRepository orderRepository,
@@ -28,7 +28,7 @@ public class OrderService : IOrderService
         _orderRepository = orderRepository;
         _orderItemRepository = orderItemRepository;
         _itemFlavorsRepository = itemFlavorsRepository;
-        _orderValidator = new OrderValidator(clientService);
+        _clientValidator = new ClientValidator(clientService);
         _pizzaFlavorService = pizzaFlavorService;
     }
 
@@ -37,10 +37,10 @@ public class OrderService : IOrderService
         string ret;
         if (orderItemEntityList != null)
         {
-            if (!_orderValidator.IsValidOrder(orderItemEntityList))
+            if (!OrderValidator.IsValidOrder(orderItemEntityList))
                 return "Um pedido pode ter até 10 pizzas. Favor rever o corpo da requisição e tente novamente.";
 
-            if (!_orderValidator.IsValidOrderItem(orderItemEntityList))
+            if (!OrderValidator.IsValidOrderItem(orderItemEntityList))
                 return "Uma pizza pode ter até 2 sabores. Favor rever o corpo da requisição e tente novamente.";
 
             if (clientEntity != null)
@@ -48,12 +48,12 @@ public class OrderService : IOrderService
                 ClientEntity client = new ClientEntity();
                 if (!String.IsNullOrEmpty(clientEntity.Telephone))
                 {
-                    client = _orderValidator.IsExistsClient(clientEntity.Telephone);
+                    client = _clientValidator.IsExistsClient(clientEntity.Telephone);
                 }
                 else
                 {
                     client = clientEntity;
-                    var clientDefault = _orderValidator.IsExistsClient(OrderConfigConstant.PhoneClientNotRegisted);
+                    var clientDefault = _clientValidator.IsExistsClient(OrderConfigConstant.PhoneClientNotRegisted);
                     if (clientDefault != null)
                     {
                         client.Id = clientDefault.Id;
@@ -90,7 +90,7 @@ public class OrderService : IOrderService
                 #endregion//Validar Sabores
 
 
-                decimal priceFreight = _orderValidator.CalculateFreight();
+                decimal priceFreight = OrderValidator.CalculateFreight();
                 priceOrder += priceFreight;
 
                 orderEntity.PriceTotal = priceOrder;

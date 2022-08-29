@@ -1,28 +1,17 @@
 ﻿using HungryPizza.Domain.Entities;
-using HungryPizza.Service.Interfaces;
 
 namespace HungryPizza.Service.Validators;
-public class OrderValidator
+public static class OrderValidator
 {
-    private readonly IClientService _clientService;
-    public OrderValidator(IClientService clientService)
-    {
-        _clientService = clientService;
-    }
 
-    public ClientEntity IsExistsClient(string numberPhone)
-    {
-        return _clientService.GetClientByTelephone(numberPhone);
-    }
-
-    public bool IsValidOrder(List<OrderItemEntity> orderItemEntities)
+    public static bool IsValidOrder(List<OrderItemEntity> orderItemEntities)
     {
         if (orderItemEntities.Count <= 10)
             return true;
         else
             return false;
     }
-    public bool IsValidOrderItem(List<OrderItemEntity> orderItemEntities)
+    public static bool IsValidOrderItem(List<OrderItemEntity> orderItemEntities)
     {
         foreach (var item in orderItemEntities)
         {
@@ -37,7 +26,7 @@ public class OrderValidator
         return true;
     }
 
-    public decimal CalculateFreight()
+    public static decimal CalculateFreight()
     {
         return 0;
     }
