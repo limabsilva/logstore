@@ -146,6 +146,10 @@ public class OrderService : IOrderService
         }
     }
 
+    public async Task<IEnumerable<OrdersListClientResponse>> GetListOrdersByClient(string phoneNumber)
+    {
+        return await _orderRepository.GetListOrdersByClient(phoneNumber);
+    }
     protected static string SetDeliveryAddress(ClientEntity clientEntity)
     {
         StringBuilder deliveryAddres = new StringBuilder();

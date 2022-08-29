@@ -51,9 +51,9 @@ public static class OrdersEndpoints
         {
             ClientEntity clientEntity = ClientMapper.ClientEntityMapper(orderRequest.Client);
             OrderEntity orderEntity = OrdersMapper.OrderEntityMapper(orderRequest);
-            List<OrderItemEntity> orderItemEntities = OrdersMapper.OrderItemEntityMapper(orderRequest);            
+            List<OrderItemEntity> orderItemEntities = OrdersMapper.OrderItemEntityMapper(orderRequest);
 
-            if(orderItemEntities == null)
+            if (orderItemEntities == null)
             {
                 return "Favor selecione pelo menos 1(um) sabor de pizza para realizar o pedido.";
             }
@@ -70,6 +70,12 @@ public static class OrdersEndpoints
             }
             return await service.RegisterOrder(clientEntity, orderEntity, orderItemEntities);
         });
+
+        app.MapGet(RootName + "/listAllByClient", async ([FromServices] IOrderService service, [FromQuery] string phoneNumber) =>
+        {
+            return await service.GetListOrdersByClient(phoneNumber);
+        });
+
     }
 
 
