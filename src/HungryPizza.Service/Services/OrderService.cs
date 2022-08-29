@@ -78,7 +78,7 @@ public class OrderService : IOrderService
                         if (iPizza != null)
                         {
                             if (!iPizza.FirstOrDefault().Available)
-                                return $"Pizza de {iPizza.FirstOrDefault().Flavor} não está indiponível. Favor rever seu pedido.";
+                                return $"Pizza de {iPizza.FirstOrDefault().Flavor} não está diponível. Favor rever seu pedido.";
 
                             pricePizza += iPizza.FirstOrDefault().PricePizza;
                         }
@@ -114,7 +114,7 @@ public class OrderService : IOrderService
                                 return "Falha ao registrar os sabores do seu pedido. Favor tente novamente.";
                             }
                         }
-                        return "Pedido registrado com sucesso!";
+                        return $"Pedido nº: {orderEntity.Id} registrado com sucesso!";
                     }
                     else
                     {

@@ -28,7 +28,10 @@ Eis JSON para cadastrar este cliente default:
 	  "city": "Santa Barbara Doeste",
 	  "zipCode": "13454369",
 	  "orders": null
-	}	
+	}
+
+
+	
 esta mesma estrutura serve para cadastrar novos clientes.
 
 4) Abaixo possui o endpoint e o corpo da mensagem para cadastrar as pizzas:
@@ -85,3 +88,59 @@ Endpoint: Pizza
 	  "size": "FAMÍLIA"
 	}
 	
+	
+5) Para realizar um pedido é necessário consultar o Endpoint de lista de pizza(https://localhost:7101/pizza/listAll) para obter o 
+ID do sabor desejado(pizzaFlavorID).  
+
+Os dados do cliente não são obrigatórios, quando o atributo 'telephone' estiver preenchido. Caso contrário,
+todos os campos de endereço e nome serão validados.
+
+O atributo 'description' é opcional. Este é utilizado para armazenar o nome do cliente não registrado no sistema. 
+
+Exemplo de request para realizar um pedido:
+Method: POST
+ENDPOINT: https://localhost:7101/order/register
+{
+  "client": {
+    "telephone": "21987930138",
+    "name": "",
+    "streetName": "",
+    "number" : 0,
+    "complement": "",
+    "neighborhood": "",
+    "state": "",
+    "city": "",
+    "zipCode": ""
+  },
+  "description": "Pago com PIX antecipadamente.",
+  "pizzas": [
+    {
+      "pizza": [
+        {
+          "pizzaFlavorID": 25
+        }
+      ],
+      "comments": "Sem cebola"
+    },
+    {
+      "pizza": [
+        {
+          "pizzaFlavorID": 19
+        }
+      ],
+      "comments": "Favor trocar muçarela por gorgonzola."
+    },
+    {
+      "pizza": [
+        {
+          "pizzaFlavorID": 20
+        }
+        ,
+        {
+          "pizzaFlavorID": 23
+        }
+      ],
+      "comments": "Pouca cebola e sem azeitona."
+    }
+  ]
+}	
