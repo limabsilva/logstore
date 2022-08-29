@@ -69,5 +69,5 @@ Futuramente implementar método para calcular frete. OK
 
 
 
-- Testes de unidade
+- Testes de unidade - OK
 	
