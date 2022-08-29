@@ -3,9 +3,10 @@ com seus devidos relacionamentos e realizar operações simples de cadastro.
 
 1) Para criar a base de dados execute o 
 comando abaixo no terminal do projeto HungryPizza.Persistence:
+	
 	dotnet ef database update
 	
-	Deverá aparecer a seguinte mensagem de sucesso: "Applying migration '20220827140000_CreateDatabase'. Done."
+	Deverá aparecer a seguinte mensagem de sucesso: "Applying migration '20220829113151_CreateDataBase'. Done."
 
 2) É possível realizar testes utilizando apps como PostMan, mas também
 disponibilizei o Swagger para realizar testes diretamente da API, segue acesso:
@@ -32,7 +33,7 @@ Eis JSON para cadastrar este cliente default:
 
 
 	
-esta mesma estrutura serve para cadastrar novos clientes.
+Esta mesma estrutura serve para cadastrar novos clientes.
 
 4) Abaixo possui o endpoint e o corpo da mensagem para cadastrar as pizzas:
 Endpoint: Pizza

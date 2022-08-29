@@ -75,13 +75,15 @@ public class OrderService : IOrderService
                     foreach (var pizzaItem in item.ItemFlavorsOrderList)
                     {
                         var iPizza = await _pizzaFlavorService.GetOnePizza(pizzaItem.PizzaFlavorID);
-                        if (iPizza != null)
+                        if (iPizza != null && iPizza.Count() > 0)
                         {
                             if (!iPizza.FirstOrDefault().Available)
                                 return $"Pizza de {iPizza.FirstOrDefault().Flavor} não está diponível. Favor rever seu pedido.";
 
                             pricePizza += iPizza.FirstOrDefault().PricePizza;
                         }
+                        else
+                            return $"Pizza de nº {pizzaItem.PizzaFlavorID} não encontrada em nosso cardápio. Favor rever seu pedido.";
                     }
                     item.PriceItem = (pricePizza / item.ItemFlavorsOrderList.Count);
                     priceOrder += item.PriceItem;

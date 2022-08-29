@@ -20,7 +20,7 @@ public class OrderRepository : BaseRepository<OrderEntity>, IOrderRepository
     {
         int offSet = 0;      
 
-        if (page == 1)
+        if (page <= 1)
             offSet = 0;
         else if (page > 1)
             offSet = ((page - 1) * DBConfigConstant.PageSize);
