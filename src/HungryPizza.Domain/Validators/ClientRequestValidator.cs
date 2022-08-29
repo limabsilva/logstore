@@ -26,5 +26,15 @@ public class ClientRequestValidator : IValidator<ClientRequest>
 
         return validatorReponse.Result();
     }
+
+    public ValidatorResponseModel ValidateTelephone(string Telephone)
+    {
+        var validatorReponse = new ModelValidator();
+
+        validatorReponse.NotEmpty(Telephone, ValidatorMessages.MandatoryFieldMessage("Telephone"));
+        validatorReponse.ExactLenght(Telephone, 11, ValidatorMessages.ExactLenghtNumberFieldMessage("Telephone", 11));
+
+        return validatorReponse.Result();
+    }
 }
 

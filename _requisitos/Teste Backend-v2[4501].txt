@@ -7,11 +7,11 @@ que atenda aos requisitos abaixo:
 
 # Obrigatórios
 
-Tarefa 1
+Tarefa 1 - Feito
 - A aplicação deve ser construida com C# - OK
 - A api deve rodar em ambiente Linux, por isso é necessário que seja construída com .NET Core - OK
 - Endpoint que registra um pedido
-    - Todo pedido precisa ter um identificador único, o sistema deve gerar um e no caso de sucesso o endpoint deve retorná-lo
+    - Todo pedido precisa ter um identificador único, o sistema deve gerar um e no caso de sucesso o endpoint deve retorná-lo OK
     #Validação
 	- Um pedido pode ter no mínimo uma pizza e no máximo 10.
     - Cada pizza pode ter até dois sabores.
@@ -24,8 +24,8 @@ Tarefa 1
 
 Tarefa 2
 - Endpoint que lista pedidos
-    - apenas para clientes que tem cadastro, deve receber o identificador do mesmo
-    - deve fornecer identificador do pedido, data/hora em que o pedido foi feito, quantidade de pizzas e valor total
+    - apenas para clientes que tem cadastro, deve receber o identificador do mesmo - OK
+    - deve fornecer identificador do pedido, data/hora em que o pedido foi feito, quantidade de pizzas e valor total - OK
     - o endpoint deve suportar paginação (ordenação do pedido mais recente para o mais antigo)
 
 Tarefa 3

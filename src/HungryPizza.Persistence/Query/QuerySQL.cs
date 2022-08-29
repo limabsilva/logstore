@@ -28,13 +28,13 @@ public static class QuerySQL
 										from [dbo].[PizzaFlavor] PF INNER JOIN [dbo].[PizzaFlavorsPrice] PFP ON PFP.PizzaFlavorEntityID = PF.PizzaFlavorID
 										where PF.PizzaFlavorID = @PizzaFlavorID";
 
-	public const string GetAllOrdersByClient = @"SELECT	C.Telephone 'TELEFONE', 
-															C.Name 'CLIENTE', 
-															O.OrderID 'PEDIDO',
-															O.Register 'DATA_HORA',
-															O.PriceTotal 'VALOR_PEDIDO_COM_FRETE',
-															SUM(OI.PriceItem) 'VALOR_PEDIDO',
-															COUNT(1) 'QTD_PIZZAS'
+	public const string GetAllOrdersByClient = @"SELECT	C.Telephone 'Telefone', 
+															C.Name 'Cliente', 
+															O.OrderID 'NumPedido',
+															O.Register 'DataHoraPedido',
+															O.PriceTotal 'ValorPedidoComFrete',
+															SUM(OI.PriceItem) 'ValorPedido',
+															COUNT(1) 'QTDPizzas'
 													FROM [dbo].Client C INNER JOIN [Order] O on O.ClientID = C.ClientID
 															INNER JOIN OrderItem OI on OI.OrderID = O.OrderID
 													WHERE C.Telephone = @PhoneNumber
@@ -42,7 +42,8 @@ public static class QuerySQL
 															C.Name, 
 															O.OrderID,
 															O.Register,
-															O.PriceTotal";
+															O.PriceTotal
+													ORDER BY O.Register DESC";
 
 }
 

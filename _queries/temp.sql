@@ -43,6 +43,7 @@ GROUP BY C.Telephone,
 		O.OrderID,
 		O.Register,
 		O.PriceTotal
+ORDER BY O.Register DESC
 
 
 select * from [OrderItem]
