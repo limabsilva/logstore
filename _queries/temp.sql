@@ -27,6 +27,9 @@ select * from [dbo].Client
 select * from [Order]
 select * from [OrderItem]
 select * from [ItemFlavors]
+GO
+DECLARE @StartingRowNumber tinyint = 1
+      , @EndingRowNumber tinyint = 5;
 
 SELECT	C.Telephone 'TELEFONE', 
 		C.Name 'CLIENTE', 
@@ -44,6 +47,8 @@ GROUP BY C.Telephone,
 		O.Register,
 		O.PriceTotal
 ORDER BY O.Register DESC
+OFFSET @StartingRowNumber ROWS 
+FETCH NEXT @FetchRows ROWS ONLY;
 
 
 select * from [OrderItem]

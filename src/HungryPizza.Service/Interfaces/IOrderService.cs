@@ -6,5 +6,5 @@ public interface IOrderService
 {
     Task<string> RegisterOrder(ClientEntity clientEntity, OrderEntity orderEntity, List<OrderItemEntity> orderItemEntityList);
 
-    Task<IEnumerable<OrdersListClientResponse>> GetListOrdersByClient(string phoneNumber);
+    Task<IEnumerable<OrdersListClientResponse>> GetListOrdersByClient(string phoneNumber, int page);
 }

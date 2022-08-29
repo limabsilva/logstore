@@ -43,7 +43,9 @@ public static class QuerySQL
 															O.OrderID,
 															O.Register,
 															O.PriceTotal
-													ORDER BY O.Register DESC";
+													ORDER BY O.Register DESC
+													OFFSET @Offset ROWS 
+													FETCH NEXT @Next ROWS ONLY";
 
 }
 

@@ -26,11 +26,11 @@ Tarefa 2
 - Endpoint que lista pedidos
     - apenas para clientes que tem cadastro, deve receber o identificador do mesmo - OK
     - deve fornecer identificador do pedido, data/hora em que o pedido foi feito, quantidade de pizzas e valor total - OK
-    - o endpoint deve suportar paginação (ordenação do pedido mais recente para o mais antigo)
+    - o endpoint deve suportar paginação (ordenação do pedido mais recente para o mais antigo) - OK
 
 Tarefa 3
 - Testes de unidade
-    - como e o que testar, e com quais bibliotecas, fica a critério do que achar mais apropriado
+    - como e o que testar, e com quais bibliotecas, fica a critério do que achar mais apropriado - OK
 
 # Informações adicionais
 
