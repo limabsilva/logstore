@@ -46,7 +46,30 @@ public static class OrdersEndpoints
 
     public static void OrderEndpoints(this WebApplication app)
     {
+        string RootName = "order";
+        app.MapPost(RootName + "/register", async ([FromServices] IOrderService service, [FromBody] OrderRequest orderRequest) =>
+        {
+            ClientEntity clientEntity = ClientMapper.ClientEntityMapper(orderRequest.Client);
+            OrderEntity orderEntity = OrdersMapper.OrderEntityMapper(orderRequest);
+            List<OrderItemEntity> orderItemEntities = OrdersMapper.OrderItemEntityMapper(orderRequest);            
 
+            if(orderItemEntities == null)
+            {
+                return "Favor selecione pelo menos 1(um) sabor de pizza para realizar o pedido.";
+            }
+            var validator = new OrderValidator();
+            var retValidacao = validator.Validate(orderRequest);
+            if (!retValidacao.IsValid)
+            {
+                var errors = new ErrorResponseModel()
+                {
+                    Message = "Parâmetros inconsistentes",
+                    Errors = retValidacao.Errors
+                };
+                return errors.ToJson();
+            }
+            return await service.RegisterOrder(clientEntity, orderEntity, orderItemEntities);
+        });
     }
 
 

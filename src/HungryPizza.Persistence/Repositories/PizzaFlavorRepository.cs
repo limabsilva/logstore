@@ -20,12 +20,21 @@ public class PizzaFlavorRepository : BaseRepository<PizzaFlavorEntity>, IPizzaFl
         var ret = await QueryMany<PizzasFlavorsResponse>(QuerySQL.ListAllPizzas);
         return ret;
     }
+
+    public async Task<IEnumerable<PizzasFlavorsResponse>> GetOnePizza(int id)
+    {
+        var parameters = new DynamicParameters();
+        parameters.Add("@PizzaFlavorID", id);
+        var ret = await QueryMany<PizzasFlavorsResponse>(QuerySQL.GetOnePizza, parameters);
+        return ret;
+    }
+
     Task<bool> IBaseRepository<PizzaFlavorEntity>.Delete(int id)
     {
         throw new NotImplementedException();
     }
 
-    Task<PizzaFlavorEntity> IBaseRepository<PizzaFlavorEntity>.GetOne(int id)
+    async Task<PizzaFlavorEntity> IBaseRepository<PizzaFlavorEntity>.GetOne(int id)
     {
         throw new NotImplementedException();
     }

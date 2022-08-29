@@ -6,6 +6,8 @@ public interface IPizzaFlavorService
 {
     Task<IEnumerable<PizzasFlavorsResponse>> ListAllPizzas();
 
+    Task<IEnumerable<PizzasFlavorsResponse>> GetOnePizza(int id);
+
     Task<string> RegisterPizzaFlavor(PizzaFlavorEntity pizzaFlavorEntity, PizzaFlavorsPriceEntity pizzaFlavorsPriceEntity);
 }
 

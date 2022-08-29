@@ -28,6 +28,11 @@ public class ModelValidator
         if (value.Length > limit)
             _response.Errors.Add(errorMessage);
     }
+    public void ExactLenght(string value, int numberExact, string errorMessage)
+    {
+        if (value.Length != numberExact)
+            _response.Errors.Add(errorMessage);
+    }
 
     public void ApplyValidator<T>(T instance, IValidator<T> validator, string errorMessage)
     {

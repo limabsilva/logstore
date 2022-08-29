@@ -9,6 +9,6 @@ public static class ServiceDependency
     {
         services.AddTransient<IPizzaFlavorService, PizzaFlavorService>();
         services.AddTransient<IClientService, ClientService>();
-
+        services.AddTransient<IOrderService, OrderService>();
     }
 }
